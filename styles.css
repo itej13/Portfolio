@@ -1,0 +1,218 @@
+/* ------------------------------
+   Root Variables (Theme Colors)
+--------------------------------*/
+:root {
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --accent: #0b6e88;
+  --muted: #6b7280;
+  --text: #0f1724;
+  --radius: 10px;
+  --container: 1100px;
+}
+
+/* ------------------------------
+   Global Styles
+--------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 28px;
+}
+
+/* ------------------------------
+   Header & Navigation
+--------------------------------*/
+.site-header {
+  background: linear-gradient(90deg, var(--card), var(--bg));
+  box-shadow: 0 1px 6px rgba(15, 23, 36, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.sub {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.main-nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* ------------------------------
+   Hero Section
+--------------------------------*/
+.hero {
+  padding: 48px 0;
+  background: linear-gradient(180deg, rgba(11, 110, 136, 0.06), transparent);
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.ctas {
+  margin-top: 18px;
+}
+
+/* Buttons */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+/* ------------------------------
+   Skills Section
+--------------------------------*/
+.skills .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(11, 22, 33, 0.04);
+}
+
+/* ------------------------------
+   Projects Section
+--------------------------------*/
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.project {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(11, 22, 33, 0.04);
+}
+
+.project img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  background: linear-gradient(90deg, #e6f7fb, #eef7ff);
+}
+
+.project-body {
+  padding: 14px;
+}
+
+/* ------------------------------
+   Contact Section
+--------------------------------*/
+.contact-form {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+  max-width: 640px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ef;
+}
+
+/* ------------------------------
+   Footer
+--------------------------------*/
+.site-footer {
+  padding: 18px 0;
+  text-align: center;
+  background: transparent;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ------------------------------
+   Responsive Adjustments
+--------------------------------*/
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
